@@ -2,6 +2,14 @@
     "files.associations": {
         "array": "cpp",
         "initializer_list": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "vector": "cpp",
+        "cmath": "cpp",
+        "cstdlib": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "random": "cpp",
+        "limits": "cpp"
     }
 }
