@@ -1,21 +1,21 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int count = 0;
-        int candidate = 0;
+        int count = 0;       // Tracks balance between candidate and others
+        int candidate = 0;   // Stores the potential majority element
         
         for (int num : nums) {
             if (count == 0) {
-                candidate = num;
+                candidate = num;   // Pick new candidate
             }
             
             if (num == candidate) {
-                count++;
+                count++;           // Same as candidate → increase balance
             } else {
-                count--;
+                count--;           // Different from candidate → decrease balance
             }
         }
         
-        return candidate;
+        return candidate;   // Candidate is guaranteed majority (problem statement ensures it)
     }
 };
