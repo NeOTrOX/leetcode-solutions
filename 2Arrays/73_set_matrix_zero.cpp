@@ -1,3 +1,23 @@
+/*
+Micro Notes:
+
+Problem:
+Given an m x n matrix, if an element is 0, set its entire row and column to 0 in-place.
+
+Logic:
+1. Use first row and first column as markers:
+    - Traverse matrix:
+        - If matrix[i][j] == 0:
+            - Mark first element of row i and column j as 0.
+            - Use separate flags fr, fc for first row & column.
+2. Traverse matrix again (excluding first row & column):
+    - Set matrix[i][j] = 0 if row or column marked.
+3. Handle first row & first column separately if flagged.
+
+Time Complexity: O(m*n)
+Space Complexity: O(1) // in-place
+*/
+
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {

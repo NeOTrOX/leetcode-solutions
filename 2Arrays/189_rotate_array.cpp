@@ -1,3 +1,20 @@
+/*
+Micro Notes:
+
+Problem:
+Given an array nums, rotate it to the right by k steps, where k is non-negative.
+
+Logic (Three-step Reverse Trick):
+1. Reduce k modulo n → k = k % n (rotation larger than array size wraps around).
+2. Reverse the whole array.
+3. Reverse first k elements.
+4. Reverse remaining n-k elements.
+5. This achieves the rotation in-place.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {

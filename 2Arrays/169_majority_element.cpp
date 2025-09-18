@@ -1,3 +1,22 @@
+/*
+Micro Notes:
+
+Problem:
+Given an array nums of size n, find the majority element (appears more than n/2 times). 
+Assume that a majority element always exists.
+
+Logic (Boyer-Moore Voting Algorithm):
+1. Initialize count = 0, candidate = 0.
+2. Traverse the array:
+   - If count == 0 → pick current number as new candidate.
+   - If num == candidate → increment count.
+   - Else → decrement count.
+3. At the end, candidate holds the majority element.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {

@@ -1,3 +1,20 @@
+/*
+Micro Notes:
+
+Problem:
+Given an array nums, move all 0's to the end while maintaining 
+the relative order of non-zero elements. Must do this in-place.
+
+Logic (Two-pointer approach):
+1. Initialize left pointer → position to place next non-zero element.
+2. Traverse array with right pointer.
+3. Whenever nums[right] != 0 → swap nums[right] with nums[left], then increment left.
+4. This keeps non-zero elements at the front and pushes zeros to the end.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {

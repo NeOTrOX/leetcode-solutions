@@ -1,3 +1,24 @@
+/*
+Micro Notes:
+
+Problem:
+Given an integer array nums and integer k, return the total number of continuous 
+subarrays whose sum equals to k.
+
+Logic (Prefix Sum + HashMap):
+1. Maintain prefix sum `preSum` as we traverse the array.
+2. Use hashmap `mpp` to store frequency of prefix sums seen so far.
+3. At each step:
+   - preSum = sum(nums[0..i])
+   - If (preSum - k) exists in hashmap → there exists a subarray ending at i with sum = k
+   - Add its frequency to answer.
+4. Update hashmap with current prefix sum frequency.
+5. Return total count.
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+*/
+
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {

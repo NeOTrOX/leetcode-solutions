@@ -1,3 +1,21 @@
+/*
+Micro Notes:
+
+Problem:
+Given a binary array, find the maximum number of consecutive 1s.
+
+Logic:
+1. Initialize `count` to track current streak of 1s.
+2. Initialize `maxi` to track maximum streak found so far.
+3. Traverse the array:
+   - If nums[i] == 1 → increment count and update maxi.
+   - Else → reset count to 0.
+4. Return maxi at the end.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
